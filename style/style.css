@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+h1{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(238, 234, 234);
+    font-size: 3rem;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/bckimg3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header{
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    flex-grow: 1;
+}
+
+.galeria-container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 90px 15px 0 15px ;
+}
+
+.galeria-itens{
+    width: 340px;
+    height: 240px;
+    flex-grow: 1;
+}
+
+.galeria-itens img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: brightness(30%);
+    transition: all .3s linear;
+}
+
+.galeria-itens img:hover {
+    filter: brightness(100%);
+
+}
+
+.slide{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -999;
+    opacity: 0;
+    transition: opacity .3s linear;
+}
+
+.slide:target{
+    z-index: 999;
+    opacity: 1;
+}
+
+.slide .imagem-container{
+    position: relative;
+    width: 90%;
+    height: 90%;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide .imagem-container img{
+    width: 100%;
+    height: 100%;
+}
+
+.slide .fechar{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: #ffffff;
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    transition: all .2s linear;
+}
+
+.slide .fechar:hover{
+    background-color: crimson;
+}
+
+.slide .navegacao{
+    position: absolute;
+    width: 60px;
+    height: 94%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    color: #ffffff;
+    opacity: 0;
+    transition: all .3s linear
+}
+
+.slide .navegacao:hover{
+    opacity: 1;
+}
+
+.slide .anterior{
+    left: 0;
+}
+
+.slide .proximo{
+    right: 0;
+}
+
+footer{
+    color: white;
+    font-style: italic;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
